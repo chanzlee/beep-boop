@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/hal9000.css" rel="stylesheet" type="text/css">
     <script
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -12,25 +13,36 @@
   </head>
   <body>
     <div class="container">
-      <h1>Beep Boop</h1>
-      <div>
+      <h1>hal 9000 counting numbers</h1>
+
+        <div class="notification active">
+            <div class="hover-effect"></div>
+            <div class="metal">
+              <div class="light">
+                  <div class="glowing-red">
+                      <div class="glowing-yellow"></div>
+                 </div>
+             </div>
+        </div>
+      </div>
+
         <form id="formOne">
           <div class="form-group">
-            <label for="numberInput">Enter a number</label>
+            <label for="numberInput">Enter numbers for HAL9000 to count up</label>
             <input id="numberInput" class="form-control" type="text">
           </div>
 
           <div class="form-group">
-              <input type="checkbox" name="order" value="reverse"> show reversed order<br>
-          </div>
+              <input type="checkbox" name="order" value="reverse"> Count in Reverse</div>
 
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-warning">Submit</button>
         </form>
-      </div>
 
-      <div class="result">
-      <p>This is your result: <span id="result"></span></p>
-      </div>
+        <div class="result">
+        <h3>Open the pod bay doors, HAL!</h3>
+        <p><span id="result"></span></p>
+        </div>
+    </div>
     </div>
   </body>
 </html>

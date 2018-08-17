@@ -19,9 +19,11 @@ function beepBoop (numberInput) {
 
   var re = /^[0-9]+$/g
   if (!numberInput.match(re)){
-    alert("Invalid Input");
+    $("*").addClass("turnoff disable-css-transitions");
+    alert("Dave...This conversation can serve no purpose anymore. Goodbye");
+    return "Dave...This conversation can serve no purpose anymore. Goodbye";
   } else {
-
+    $("*").delay(100).fadeOut().fadeIn('slow');
     numberInput = parseInt(numberInput);
     var result = [];
 
