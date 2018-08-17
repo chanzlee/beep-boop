@@ -1,4 +1,4 @@
-// Front-end
+// Front-end /////////////////////////////////////////////////
 $(document).ready(function(){
   $("#formOne").submit(function(event){
     event.preventDefault();
@@ -15,19 +15,17 @@ $(document).ready(function(){
 
       alert("Dave...This conversation can serve no purpose anymore.");
       alert("Goodbye...");
-
     } else {
-      $("*").delay(100).fadeOut().fadeIn('slow');
+      $("*").fadeOut().fadeIn('slow');
       $(".notification").removeClass("hidden");
 
       var result = beepBoop(userInput);
-      $("#result").text(result);
-
+      $("#result").text(result).delay(100);
     }
   });
 });
 
-// Back-end
+// Back-end /////////////////////////////////////////////////
 
 function beepBoop (numberInput) {
 
@@ -77,6 +75,5 @@ function beepBoop (numberInput) {
     } else {
       result =  result.join(" ")
     }
-
     return result;
 };
