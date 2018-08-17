@@ -12,10 +12,26 @@ $(document).ready(function(){
 // back-end logic
 
 function beepBoop (numberInput) {
-  for (var number = 1; number <= numberInput; number++) {
+  var result = [];
+
+  for (var number = 0; number <= numberInput; number++) {
     strNum = number.toString();
     alert(strNum);
     isSpecial = false;
 
+    for ( i = 0; i < strNum.length; i++) {
+        var  checkNum= strNum.charAt(i);
+        if (checkNum == '0' || checkNum == '1' || checkNum == '3') {
+            isSpecial = true;
+        }
+    }
+
+    if (isSpecial) {
+      result += "special"
+    } else {
+      result += strNum
+    }
+
   }
+  return result;
 };
