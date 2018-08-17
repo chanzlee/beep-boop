@@ -34,6 +34,12 @@ $(document).ready(function(){
   $(".name p").click(function(){
     $(".formName").toggleClass("hidden");
   });
+
+  $("button").mouseenter(function blinker(){
+    $(this).fadeOut(300);
+    $(this).fadeIn(300);
+  });
+
 });
 
 // Back-end /////////////////////////////////////////////////
