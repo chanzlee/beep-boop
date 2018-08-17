@@ -26,30 +26,16 @@ _None._
 chanethanlee@gmail.com_
 
 ## Specs
-The program detects any 0, 1, 3 in the number input and return true if it detects.
 
-Example Input: 40
-Example Output: true
-
-The program print out relevant results for each numbers:
-Numbers that contain a 0 : Beep!
-Numbers that contain a 1 : Boop!
-Numbers divisible by 3 : I'm sorry, Dave. I'm afraid I can't do that.
-
-Example Input: 1
-Example Output: Boop!
-
-
-If there are multiple detection for 0, 1, 3, the program overrides the result of detecting special numbers by following order: 3, 1, 0.
-
-Example Input: 103
-Example Output: I'm sorry, Dave. I'm afraid I can't do that.
-
-The program denies input other than number.
-
-Example Input: /,$a0
-Example Output: Invalid Input
-
+| | Spec | Input | Output |
+| :-------------     | :-------------     | :------------- | :------------- |
+| 1 |The program detects any 0, 1, 3 in the number input and return true if it detects._  | 40 | true |
+| 2 | Program replaces number containing a 0 to "Beep!""  | 0 | _"Beep!"_ |
+| 3 | Program replaces number containing a 1 with "Boop!". | 1 | _"Boop!"_ |
+| 4 | Program replaces number containing divisible by 3 with "I'm sorry, Dave. I'm afraid I can't do that.". | 3 | "I'm sorry, Dave. I'm afraid I can't do that." |
+| 6 | Program returns results for range of numbers from 0 to the chosen number_ | 3 | I'm sorry, Dave. I'm afraid I can't do that. Boop! 2 I'm sorry, Dave. I'm afraid I can't do that. |
+| 7 | If there are multiple detection for 0, 1, 3, the program overrides the result of detecting special numbers by following order: 3, 1, 0 | 310 | ... I'm sorry, Dave. I'm afraid I can't do that. |
+| 8 | The program denies input other than number. | /,$a0 | Invalid Input |
 
 ## Technologies Used
 
