@@ -1,4 +1,4 @@
-* {
+body {
   background: #000;
   color: #fff;
 }
@@ -19,4 +19,8 @@ button {
 div.result {
   text-align: center;
   padding-top: 50px;
+}
+
+.hidden {
+  display: none;
 }

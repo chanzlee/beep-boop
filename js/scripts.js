@@ -15,27 +15,35 @@ $(document).ready(function(){
 
 function beepBoop (numberInput) {
 
-  //Check out the validity of input.
+  //Check out the validity of input. If invalid, HAL says goodbye and hides. If valid, go on to the core function.
 
   var re = /^[0-9]+$/g
+
   if (!numberInput.match(re)){
-    $("*").addClass("turnoff disable-css-transitions");
-    alert("Dave...This conversation can serve no purpose anymore. Goodbye");
+    $(".notification").addClass("hidden");
+    alert("Dave...This conversation can serve no purpose anymore.")
+    alert("Goodbye");
     return "Dave...This conversation can serve no purpose anymore. Goodbye";
-  } else {
     $("*").delay(100).fadeOut().fadeIn('slow');
+
+  } else {
+
+
+    $(".notification").removeClass("hidden");
     numberInput = parseInt(numberInput);
     var result = [];
 
-    for (var number = 0; number <= numberInput; number++) {
-      strNum = number.toString();
+    // Count up to the number that user returned while checking on each counted number for any conditions met.
+
+    for (var count = 0; count <= numberInput; count++) {
+      strNum = count.toString();
       isZero = false;
       isOne = false;
       isThree = false;
 
-      // check all numbers to find whether it inclues 0, 1, number divisible by 3. When it finds, return true for revelant boolean variable.
+      // When certain conditions are met, return true for revelant boolean variable.
 
-      if (number % 3 === 0){
+      if (count % 3 === 0){
         isThree = true;
       }
 
