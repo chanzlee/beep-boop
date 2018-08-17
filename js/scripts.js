@@ -5,9 +5,25 @@ $(document).ready(function(){
 
     var userInput = $("input#numberInput").val();
     reversed = $("input:checkbox[name=order]:checked").length;
-    var result = beepBoop(userInput);
-    $("#result").text(result);
 
+    //Check out the validity of input. If invalid, HAL says goodbye and hides. If valid, go on to back-end logic.
+
+    var re = /^[0-9]+$/g
+
+    if (!userInput.match(re)){
+      $(".notification").addClass("hidden");
+
+      alert("Dave...This conversation can serve no purpose anymore.");
+      alert("Goodbye...");
+
+    } else {
+      $("*").delay(100).fadeOut().fadeIn('slow');
+      $(".notification").removeClass("hidden");
+
+      var result = beepBoop(userInput);
+      $("#result").text(result);
+
+    }
   });
 });
 
@@ -15,21 +31,6 @@ $(document).ready(function(){
 
 function beepBoop (numberInput) {
 
-  //Check out the validity of input. If invalid, HAL says goodbye and hides. If valid, go on to the core function.
-
-  var re = /^[0-9]+$/g
-
-  if (!numberInput.match(re)){
-    $(".notification").addClass("hidden");
-    alert("Dave...This conversation can serve no purpose anymore.")
-    alert("Goodbye");
-    return "Dave...This conversation can serve no purpose anymore. Goodbye";
-    $("*").delay(100).fadeOut().fadeIn('slow');
-
-  } else {
-
-
-    $(".notification").removeClass("hidden");
     numberInput = parseInt(numberInput);
     var result = [];
 
@@ -76,6 +77,6 @@ function beepBoop (numberInput) {
     } else {
       result =  result.join(" ")
     }
+
     return result;
-  }
 };
