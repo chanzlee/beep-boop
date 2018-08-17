@@ -1,3 +1,4 @@
+// Front-end
 $(document).ready(function(){
   $("#formOne").submit(function(event){
     event.preventDefault();
@@ -9,7 +10,7 @@ $(document).ready(function(){
   });
 });
 
-// back-end logic
+// Back-end
 
 function beepBoop (numberInput) {
   var result = [];
@@ -34,13 +35,13 @@ function beepBoop (numberInput) {
     }
 
     if (isThree) {
-      result += "I'm sorry, Dave. I'm afraid I can't do that.";
+      result += "I'm sorry, Dave. I'm afraid I can't do that. ";
     } else if (isOne) {
-      result += "Boop!";
+      result += "Boop! ";
     } else if (isZero) {
-      result += "Beep!";
+      result += "Beep! ";
     } else {
-      result += strNum;
+      result += strNum + " ";
     }
   }
   return result;
