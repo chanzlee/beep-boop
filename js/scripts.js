@@ -6,6 +6,12 @@ $(document).ready(function(){
     var userInput = $("input#numberInput").val();
     reversed = $("input:checkbox[name=order]:checked").length;
 
+    if ($("input#nameInput").val()) {
+      nameInput = $("input#nameInput").val();
+    } else {
+      nameInput = "Dave";
+    }
+
     //Check out the validity of input. If invalid, HAL says goodbye and hides. If valid, go on to back-end logic.
 
     var re = /^[0-9]+$/g
@@ -13,15 +19,20 @@ $(document).ready(function(){
     if (!userInput.match(re)){
       $(".notification").addClass("hidden");
 
-      alert("Dave...This conversation can serve no purpose anymore.");
+      alert(nameInput+"...This conversation can serve no purpose anymore.");
       alert("Goodbye...");
     } else {
-      $("*").fadeOut().fadeIn('slow');
       $(".notification").removeClass("hidden");
+      $(".notification").fadeOut(10).fadeIn('very slow');
 
       var result = beepBoop(userInput);
-      $("#result").text(result).delay(100);
+      $(".formName").addClass("hidden");
+      $("#result").text(result);
     }
+  });
+
+  $(".name p").click(function(){
+    $(".formName").toggleClass("hidden");
   });
 });
 
@@ -58,7 +69,7 @@ function beepBoop (numberInput) {
       // push results for each condition met, filtering from the higher priority condition.
 
       if (isThree) {
-        result.push("I'm sorry, Dave. I'm afraid I can't do that.");
+        result.push("I'm sorry, " + nameInput + ". I'm afraid I can't do that.");
       } else if (isOne) {
         result.push("Boop!");
       } else if (isZero) {

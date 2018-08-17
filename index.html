@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <link href="css/hal9000.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&amp;subset=latin-ext" rel="stylesheet">
     <script
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -14,6 +15,9 @@
   <body>
     <div class="container">
       <h1>hal 9000 counting numbers</h1>
+
+
+      <!-- Below divs are for HAL9000 animation -->
 
         <div class="notification active">
             <div class="hover-effect"></div>
@@ -26,15 +30,26 @@
         </div>
       </div>
 
+      <!-- End of HAL9000  -->
+
         <form id="formOne">
           <div class="form-group">
-            <label for="numberInput">Enter numbers for HAL9000 to count up (or HAL will shut down)</label>
+            <label for="numberInput">Enter ONLY numbers for HAL9000 to count up (or HAL will shut down)</label>
             <input id="numberInput" class="form-control" type="text">
 
           </div>
 
           <div class="form-group">
-              <input type="checkbox" name="order" value="reverse"> Count in Reverse</div>
+            <input type="checkbox" name="order" value="reverse"> Count in Reverse
+          </div>
+
+          <div class="name clickable">
+            <p>Are you not Dave?</p>
+            <div class="form-group formName hidden">
+              <label for="nameInput">Enter your name</label>
+              <input id="nameInput" class="form-control" type="text">
+            </div>
+          </div>
 
           <button type="submit" class="btn btn-warning">Submit</button>
         </form>
@@ -44,6 +59,6 @@
         <p><span id="result"></span></p>
         </div>
     </div>
-    </div>
+    <!-- end of container div -->
   </body>
 </html>
