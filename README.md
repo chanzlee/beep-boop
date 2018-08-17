@@ -20,7 +20,7 @@ _None_
 
 ## Support and contact details
 
-chanethanlee@gmail.com_
+_chanethanlee@gmail.com_
 
 ## Specs
 
