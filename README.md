@@ -1,8 +1,6 @@
 # _Beep Boop (HAL 9000 Counting Numbers)_
 
-#### _August 17, 2018_
-
-#### By _**Chan Lee**_
+#### _August 17, 2018_  By _**Chan Lee**_
 
 ## Description
 
@@ -44,6 +42,6 @@ _HTML / CSS / javaScript_
 
 ### License
 
-Under the license of _Simon Lepel_ , https://github.com/simbo
+HAL.CSS file is under the license of _Simon Lepel_, https://github.com/simbo
 
 Copyright (c) 2018 **_Chan Lee_**
