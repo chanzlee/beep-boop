@@ -10,3 +10,12 @@ $(document).ready(function(){
 });
 
 // back-end logic
+
+function beepBoop (numberInput) {
+  for (var number = 1; number <= numberInput; number++) {
+    strNum = number.toString();
+    alert(strNum);
+    isSpecial = false;
+
+  }
+};
